@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 1 Breast Cancer Precautions and Recovery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stage1.css') }}">
+</head>
+<body>
+
+<div class="content">
+    <div class="left-side">
+        <img src="{{ url_for('static', filename='img/stage3.jpg') }}" alt="Left Image">
+    </div>
+    <div class="right-side">
+        <b><h1 style="color:red;">Stage 3 Breast Cancer: Precautions and Recovery</h1></b>
+            
+          <h2 style="color:blue;">Precautions for Stage 3 Breast Cancer:</h2>
+            <ul style="font-size:20px;">
+                <li>Frequent medical check-ups and imaging</li>
+                <li>Adhering to an intensive treatment plan (chemotherapy, surgery, radiation, targeted therapy)</li>
+                <li>Adopting a healthy lifestyle: balanced diet, regular exercise, and avoiding tobacco</li>
+                <li>Being vigilant about new symptoms or changes</li>
+            </ul>
+            
+            <h2 style="color:blue;"><b>Recovery Tips:</b></h2>
+            <ul style="font-size:20px;">
+                <li>Seeking psychological support and counseling</li>
+                <li>Participating in comprehensive physical rehabilitation</li>
+                <li>Connecting with support groups and community resources</li>
+                <li>Utilizing educational materials on advanced cancer care and survivorship</li>
+            </ul>
+          <button class="button"><a href="{{ url_for('symptoms' ) }}">BACK TO SYMPTOMS</a></button> 
+  </div>
+</div>
+
+</body>
+</html>

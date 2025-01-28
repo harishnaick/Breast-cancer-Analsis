@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" id="logo" alt="Logo">
+
+        <nav class="navbar">
+            <a href="{{ url_for('home' ) }}">Home</a>
+            <a href="#about">About</a>
+            <a href="#our-services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="{{ url_for('contact' ) }}">Contact uS</a>
+            <a href="{{ url_for('predict' ) }}">Prediction</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menubar" class="fas fa-bars"></div>
+            <a href="{{ url_for('login') }}">LOG OUT</a>
+            <a href="{{ url_for('predict' ) }}">PREDICTION</a>
+        </div>
+    </header>
+
+    <div class="background-image">
+        <div class="background-content">
+            <h1>Leading the Fight <br> Against Breast Cancer</h1>
+            <p>Dedicated to early detection and diagnosis of breast cancer, <br> providing hope and better health outcomes.</p>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="main-about">
+            <div class="inner-about">
+                <div class="about-content">
+                    <h1>About Us</h1>
+                    <p>We specialize in the early detection and diagnosis of breast cancer. Our team of experts uses cutting-edge technology to provide accurate and timely diagnoses, giving patients the best chance for successful treatment.</p>
+                </div>
+            </div>
+            <div class="inner-about">
+                <div class="inner-about-image">
+                    <img src="{{ url_for('static', filename='img/chiness.jpg') }}" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-services" id="our-services">
+        <h1 class="our">OUR SPECIALIZED SERVICES</h1>
+
+        <div class="main-services">
+            <div class="inner-services-content">
+                <div class="service-icon">
+                    <i class="fas fa-notes-medical"></i>
+                </div>
+                <h2>Model Training and Development</h2>
+                <p>Using labeled datasets to train machine learning models to predict the likelihood of breast cancer based on various features such as demographics, genetic markers and clinical .</p>
+            </div>
+
+            <div class="inner-services-content">
+                <div class="service-icon">
+                    <i class="fas fa-hospital-user"></i>
+                </div>
+                <h2>Diagnostic Support</h2>
+                <p> Providing clinicians with decision support tools that integrate predictive models to aid in diagnosing breast cancer based on patient-specific data.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <h1>Gallery</h1>
+        <div class="main-gallery">
+            <div class="inner-gallery">
+                <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Gallery Image 1">
+            </div>
+            <div class="inner-gallery">
+                <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Gallery Image 2">
+            </div>
+            <div class="inner-gallery">
+                <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Gallery Image 3">
+            </div>
+            <div class="inner-gallery">
+                <img src="{{ url_for('static', filename='img/gal4.jpg') }}" alt="Gallery Image 4">
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="why-choseus" id="why-choseus">
+        <h1 class="our1">Why Choose Us</h1>
+        <div class="main-chose">
+            <div class="inner-chose">
+                <img src="{{ url_for('static', filename='img/cute.jpg') }}" alt="Why Choose Us">
+            </div>
+            <div class="inner-chose">
+                
+                <div class="inner-chose-content">
+                    <div class="main-inner-chose">
+                        <div class="chose-icon">
+                            <i class="fas fa-notes-medical"></i>
+                        </div>
+                        <div class="icon-content">
+                            <p>Expertise in breast cancer detection and diagnosis, using the latest technology and techniques.</p>
+                        </div>
+                    </div>
+                    <div class="main-inner-chose">
+                        <div class="chose-icon">
+                            <i class="fas fa-hospital-user"></i>
+                        </div>
+                        <div class="icon-content">
+                            <p>Compassionate and personalized care from a dedicated team of medical professionals.</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="celebrities">
+        <h1 class="heroin">BREAST CANCER OVERCAME INDIAN CELEBRITIES</h1>
+        <div class="celebrity">
+            <img class="image" src="{{ url_for('static', filename='img/mahima.jpg') }}" alt="Mahima Chaudhry">
+            <div class="celebrity-content">
+                <h1>Mahima Chaudhry</h1>
+                <p class="quote">"I faced one of the toughest challenges in life, but I knew I had to stay strong. It's important to stay positive and fight with all your might."</p>
+                <p class="insight">Mahima Chaudhry, a well-known Indian actress, was diagnosed with breast cancer but never gave up. Her resilience and determination to fight the disease are a testament to her strength. She emphasizes the importance of early detection and regular check-ups.</p>
+            </div>
+        </div>
+        <div class="celebrity">
+            <img class="image" src="{{ url_for('static', filename='img/manisha.avif') }}" alt="Manisha Koirala">
+            <div class="celebrity-content">
+                <h1>Manisha Koirala</h1>
+                <p class="quote">"Your journey to conquer cancer is not just about fighting the disease, but also discovering the strength you never knew you had."</p>
+                <p class="insight">Manisha Koirala, an acclaimed Indian actress, has openly shared her battle with ovarian cancer, spreading awareness and encouraging others to stay strong and seek the best medical care possible.</p>
+            </div>
+        </div>
+        <div class="celebrity">
+            <img class="image" src="{{ url_for('static', filename='img/koirala.avif') }}" alt="Another Celebrity">
+            <div class="celebrity-content">
+                <h1>Another Celebrity</h1>
+                <p class="quote">"Facing cancer head-on taught me the true meaning of resilience and the power of a positive mindset."</p>
+                <p class="insight">This celebrity's journey through breast cancer has inspired many with their unwavering courage and advocacy for early detection and regular health check-ups.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let menubar = document.querySelector('#menubar');
+    let mynav = document.querySelector('.navbar');
+
+
+menubar.onclick = () =>{
+    menubar.classList.toggle('fa-times')
+    mynav.classList.toggle('active')
+}
+</script>
+
+</body>
+</html>

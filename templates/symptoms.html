@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Diagnosis Symptoms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylist.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='img/9011-male-breast-cancer.jpg') }}  " class="breast"alt="Symptoms Image">
+        </div>
+        <div class="symptoms-section">
+            <b><h2 style="color:violet;font-size:40px;">Breast Cancer Symptoms</h2></b>
+            <div style="font-size:24px" class="one">
+                <ul>
+                    <li>New lump in the breast or underarm (armpit).</li>
+                    <li>Thickening or swelling of part of the breast.</li>
+                    <li>Irritation or dimpling of breast skin.</li>
+                    <li>Redness or flaky skin in the nipple area or the breast.</li>
+                    <li>Pulling in of the nipple or pain in the nipple area.</li>
+                    <li>Nipple discharge other than breast milk, including blood.</li>
+                    <li>Any change in the size or shape of the breast.</li>
+                    <li>Pain in any area of the breast.</li>
+                    <li>A sudden loss of weight without changes in diet or exercise</li>
+                    <li>Persistent pain in the breast that does not go away.</li>
+                    <li>Puckering, dimpling, redness, or a rash on the breast that persists.</li>
+                    <li>Any fluid coming from the nipple, especially if it is bloody.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="symptoms-section">
+            <b><h2 style="color:violet;font-size:40px;text-align:center;"class="single-line-text">Breast Cancer Symptoms</h2></b>
+            <div style="font-size:24px" class="one">
+                <ul>
+                    <li>New lump in the breast or underarm (armpit).</li>
+                    <li>Thickening or swelling of part of the breast.</li>
+                    <li>Irritation or dimpling of breast skin.</li>
+                    <li>Redness or flaky skin in the nipple area or the breast.</li>
+                    <li>Pulling in of the nipple or pain in the nipple area.</li>
+                    <li>Nipple discharge other than breast milk, including blood.</li>
+                    <li>Any change in the size or shape of the breast.</li>
+                    <li>Pain in any area of the breast.</li>
+                    <li>The nipple turning inward.</li>
+                    <li> If the cancer has spread to the lungs, there can be difficulty breathing</li>
+                    <li>Sudden loss of weight without changes in diet or exercise.</li>
+                    <li>Continuous pain or discomfort in the breast area that does not correlate with the menstrual cycle.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='img/female.jpg') }}  " class="breast" alt="Symptoms Image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-section">
+            <b><h2 class="single-line-text">Know Your Stage of Breast Cancer</h2></b>
+            <form id="symptomForm" method="post" action="{{ url_for('symptoms') }}" class="form">
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="0" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="symptom">Select Symptom:</label>
+                    <select id="symptom" name="symptom" required>
+                        <option value="itching">Itching or Irritation</option>
+                        <option value="lump">New Lump</option>
+                        <option value="lump_breast_pain">Lump + Breast Pain</option>
+                        <option value="blood_discharge">Blood Discharge</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+        <button  class="submit"><a href="{{ url_for('home' ) }}">HOME</a></button>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff69b4;
+    color: white;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80vh;
+    padding: 20px;
+}
+
+.left-side {
+    flex: 1;
+    padding: 20px;
+    margin-top: 100px;
+    margin-right: 40px;
+}
+
+.left-side img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #ff69b4;
+    border-radius: 10px;
+}
+
+.right-side {
+    flex: 2;
+    padding: 20px;
+    background-color: #ffe6f2;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-side h2 {
+    font-size: 24px;
+    color: #ff69b4;
+}
+
+.right-side p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.right-side ul li {
+    margin-bottom: 20px;
+}
+
+.right-side {
+    margin-top: 100px;
+    margin-right: 100px;
+}
+
+.button {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(210, 20, 235);
+    margin-top: 30px;
+    margin-left: 25%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button a:hover {
+    text-decoration: none;
+    color: #ffe6f2;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: "✔";
+    color: #ff69b4;
+    padding-right: 10px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Style for the home button */
+        .home-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .home-btn-text {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img class="wave" src="{{ url_for('static', filename='img/wave.png') }}">
+    <div class="container">
+        <div class="img">
+            <img src="{{ url_for('static', filename='img/doc1.png') }}">
+        </div>
+        <div class="login-content">
+            <form method="POST">
+                <img src="{{ url_for('static', filename='img/avatar.svg') }}">
+                <h2 class="title"> signup here</h2>
+                <div class="input-div one">
+                   <div class="i">
+                        <i class="fas fa-user"></i>
+                   </div>
+                   <div class="div">
+                        <h5>Username</h5>
+                        <input type="text" class="input"  name="username" required>
+                   </div>
+                </div>
+                <div class="input-div">
+                    <div class="i"> 
+                         <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="div">
+                         <h5>Email</h5>
+                         <input type="email" class="input" id="email" name="email" required>
+                    </div>
+                 </div>
+                <div class="input-div pass">
+                   <div class="i"> 
+                        <i class="fas fa-lock"></i>
+                   </div>
+                   <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input"  name="password" required>
+                   </div>
+                </div>
+                <input type="submit" class="btn" value="Signup">
+                <p class="dont">Already have an account? <a href="{{ url_for('login') }}"><p class="sign">Login here</p></a></p>
+                
+            </form>
+            
+        </div>
+    </div>
+    <!-- Home button -->
+    <script type="text/javascript" >
+        const inputs = document.querySelectorAll(".input");
+
+
+function addcl(){
+	let parent = this.parentNode.parentNode;
+	parent.classList.add("focus");
+}
+
+function remcl(){
+	let parent = this.parentNode.parentNode;
+	if(this.value == ""){
+		parent.classList.remove("focus");
+	}
+}
+
+
+inputs.forEach(input => {
+	input.addEventListener("focus", addcl);
+	input.addEventListener("blur", remcl);
+});
+
+    </script>
+</body>
+</html>

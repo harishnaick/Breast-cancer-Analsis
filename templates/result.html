@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='img/doctor.jpg') }}" alt="Doctor" class="doctor-img">
+            <h1>Prediction Result</h1>
+        </div>
+    </header>
+    <main>
+        <div class="result-content">
+            <h2>The predicted diagnosis is: {{ diagnosis }}</h2>
+            {% if diagnosis == 'Malignant' %}
+                <p>Suggested treatment for malignant breast cancer includes surgery, radiation therapy, chemotherapy, and targeted therapy.</p>
+                <p>Here are some recommended hospitals for treatment:</p>
+                <ul>
+                    <li>1. Memorial Sloan Kettering Cancer Center (MSKCC), New York, USA</li>
+                    <li>2. Mayo Clinic, Rochester, USA</li>
+                    <li>3. The Royal Marsden Hospital, London, UK</li>
+                </ul>
+                <div>
+                    <p>check which level of breast cancer by knowing symtoms .....<button><a href="{{ url_for('symptoms' ) }}">Click Here</a></button></p>
+                </div>
+            {% else %}
+                <p>No immediate treatment is required for benign breast conditions. Regular monitoring is advisable.</p>
+                <p>If you have concerns, consult a healthcare provider for further evaluation.</p>
+            {% endif %}
+        </div>
+        
+    </main>
+</body>
+</html>
